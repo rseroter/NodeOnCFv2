@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    form(class='form-inline')
+        div(class='hero-unit')
+            h1 Currency Converter
+            p Hosted on Cloud Foundry v2 PaaS from Pivotal
+            p
+                input(type='text', class='input-small', id='amount', placeholder='Amount')
+                &nbsp;
+                input(type='text', class='input-small', style='width:120px', id='source', placeholder='Source Currency')
+                &nbsp;
+                input(type='text', class='input-small', style='width:120px', id='target', placeholder='Target Currency')
+                &nbsp;
+                input(type='button', id='convertsubmitbutton', class='btn', value='Convert!')
+            p
+                div(id='placeholder')
+
+
+        div(class="row")
+            div(class="span12")
+                p(class="muted") created by &nbsp;
+                    a(href='http://seroter.wordpress.com') richard seroter
+    script(src='/javascripts/converter.js')

@@ -1,0 +1,8 @@
+---
+applications:
+- name: serotercurrency
+  memory: 64M
+  instances: 1
+  url: serotercurrency.cfapps.io
+  path: .
+  command: node app.js
