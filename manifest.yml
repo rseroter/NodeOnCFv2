@@ -1,8 +1,8 @@
 ---
 applications:
-- name: apcurrency
+- name: serotercurrency
   memory: 64M
   instances: 1
-  url: apcurrency.cfapps.io
+  url: serotercurrency.cfapps.io
   path: .
   command: node app.js
