@@ -19,11 +19,16 @@ exports.converter = function(req, res) {
         });
 
         getres.on('end',function(){
+
             //Google returns invalid JSON so adding quotes to JSON keys
             var bodyString = body.replace('lhs', '"lhs"').replace('rhs', '"rhs"').replace('error', '"error"').replace('icc', '"icc"')
+            //Google returns weird thousands separator, replace with commas
+            var sep = '�';
+            var re = new RegExp(sep, 'g');
+            var fixedBody = bodyString.replace(re, ',');
 
             //send back JSON
-            res.send(JSON.parse(bodyString));
+            res.send(JSON.parse(fixedBody));
         });
 
     }).on('error', function(e) {

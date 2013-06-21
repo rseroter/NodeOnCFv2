@@ -4,7 +4,12 @@ block content
     form(class='form-inline')
         div(class='hero-unit')
             h1 Currency Converter
-            p Hosted on Cloud Foundry v2 PaaS from Pivotal
+            p
+                | Hosted on&nbsp;
+                a(href='http://www.cloudfoundry.com') Cloud Foundry
+                | &nbsp;v2 PaaS from&nbsp;
+                a(href='http://gopivotal.com') Pivotal
+
             p
                 input(type='text', class='input-small', id='amount', placeholder='Amount')
                 &nbsp;
@@ -17,8 +22,8 @@ block content
                 div(id='placeholder')
 
 
-        div(class="row")
-            div(class="span12")
-                p(class="muted") created by &nbsp;
+        div(class='row')
+            div(class='span12')
+                p(class='muted') created by &nbsp;
                     a(href='http://seroter.wordpress.com') richard seroter
     script(src='/javascripts/converter.js')
