@@ -3,7 +3,8 @@
 $(document).ready(function () {
 
     $('#convertsubmitbutton').click(function(){
-        //alert('called ...');
+        $('#placeholder').empty();
+
         var amount = $('#amount').val();
         var sourcecurrency = $('#source').val();
         var targetcurrency = $('#target').val();
